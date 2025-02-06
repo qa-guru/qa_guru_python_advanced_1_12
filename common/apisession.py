@@ -53,6 +53,6 @@ class TestSession(Session):
         # self.base_url = base_url
 
     @allure_request_logger
-    def request(self, path, method='GET', *args, **kwargs):
+    def request(self, path='', method='GET', *args, **kwargs):
         joined_url = self.base_url + path
         return super().request(method, joined_url, *args, **kwargs)

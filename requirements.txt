@@ -2,3 +2,5 @@ requests
 pytest
 pydantic
 allure-pytest
+Jinja2
+xmlschema

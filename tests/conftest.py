@@ -41,3 +41,12 @@ def api_module_session():
     session.headers.update({'user-agent': 'Opera'})
 
     return session
+
+
+@pytest.fixture(scope='module')
+def soap_session():
+    session = TestSession()
+    session.base_url = 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso'
+    session.headers.update({'Content-Type': 'application/soap+xml'})
+
+    return session
